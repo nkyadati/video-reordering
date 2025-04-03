@@ -43,8 +43,8 @@ digeiz/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <PLACEHOLDER_FOR_GIT_CLONE_URL>
-cd digeiz
+git clone https://github.com/nkyadati/video-reordering.git
+cd video-reordering
 ```
 
 ### Step 2: Setup Conda Environment
@@ -69,7 +69,7 @@ Please download the input shuffled videos and store them in an appropriate direc
 ## ▶️ Running the Pipeline
 
 ```bash
-python video_reordering/main.py --input <path_to_input_video> --output <path_to_output_video> -m cnn
+python video_reordering/main.py -vi <path_to_input_video.mp4> -vo <path_to_output_video.mp4> -m cnn
 ```
 
 ## 📊 Pipeline Overview
@@ -108,13 +108,13 @@ python video_reordering/main.py --input <path_to_input_video> --output <path_to_
 ## ✅ Example Log Output:
 
 ```
-[INFO] Imported 300 frames.
-[INFO] Feature extraction took 12.34 seconds
-[INFO] Detected 15 outliers.
-[INFO] Reordering took 2.45 seconds
-[INFO] Video writing took 5.67 seconds
-[INFO] Evaluation took 3.21 seconds
-[INFO] Pipeline Finished Successfully.
+[INFO] Feature extraction   : 1.37 seconds
+[INFO] Outlier removal      : 0.56 seconds
+[INFO] Reordering           : 0.05 seconds
+[INFO] Video writing        : 0.54 seconds
+[INFO] Total                : 2.51 seconds
+[INFO] ===================================
+[INFO] ===== Video Reordering Pipeline Completed Successfully =====
 ```
 
 ## 🟣 Potential Extensions
